@@ -5,8 +5,8 @@ FreeGLUT:
 
 - **SensorDashboard** subscribes to MQTT sensor messages and displays live
   temperature/humidity, temperature state, trend history, a heat map, alerts,
-  statistics, and CSV logging. It requires a running MQTT broker and a sensor
-  publisher such as the ESP32/DHT22 firmware described in the project notes.
+  statistics, and CSV logging. It requires a running MQTT broker and the
+  ESP32/DHT22 publisher in `arduino/ESP32_DHT22_MQTT/`.
 - **SensorVisualizationEvaluation** runs a controlled study comparing Numeric
   only, Status color, Trend graph, and Full dashboard displays. It records
   participants' choices, correctness, response times, and confidence to
@@ -38,14 +38,16 @@ Run either application from the project root:
 ```
 
 The applications need a graphical desktop session with OpenGL support. The
-CSV output is written beside the executable.
-Generated CSV files are ignored by Git; the evaluation output contains
-participant-level responses and should only be shared with appropriate consent.
+CSV output is written beside the executable. Generated CSV files are ignored
+by Git; the evaluation output contains participant-level responses and should
+only be shared with appropriate consent.
 
 ## Run the live dashboard
 
+Set up and upload the ESP32 publisher using
+[`arduino/ESP32_DHT22_MQTT/README.md`](./arduino/ESP32_DHT22_MQTT/README.md).
 Install and start Mosquitto, connect the ESP32 and the Linux computer to the
-same network, and configure the ESP32 publisher to send these topics:
+same network, and the sketch will publish these topics:
 
 | Topic | Payload |
 | --- | --- |
@@ -69,6 +71,8 @@ expose an anonymous MQTT listener to the public internet.
 
 - `SensorDashboard/main.cpp` — live MQTT/OpenGL dashboard.
 - `SensorVisualizationEvaluation/main.cpp` — four-mode user-study application.
+- `arduino/ESP32_DHT22_MQTT/ESP32_DHT22_MQTT.ino` — Arduino IDE firmware for
+  the ESP32/DHT22.
 - `CMakeLists.txt` — Linux-friendly build for both applications.
 
 The Code::Blocks project files in the original Windows project use
