@@ -1,0 +1,22 @@
+/build/
+/cmake-build-*/
+
+**/bin/
+**/obj/
+
+*.cbp
+*.depend
+*.layout
+*.exe
+*.dll
+*.o
+*.zip
+*.pdf
+*.docx
+*.mp4
+
+**/sensor_data.csv
+**/evaluation_results*.csv
+
+main.cpp.txt
+Real-Time Sensor Data Visualization (1).md
