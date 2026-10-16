@@ -73,3 +73,13 @@ expose an anonymous MQTT listener to the public internet.
 
 The Code::Blocks project files in the original Windows project use
 machine-specific Windows library paths. They are not used by the CMake build.
+
+## Architechture 
+<img width="799" height="584" alt="image" src="https://github.com/user-attachments/assets/2dcfcbaa-73dd-48f7-a147-b19ed98bb48b" />
+<img width="524" height="330" alt="image" src="https://github.com/user-attachments/assets/99ca5e26-49a8-460f-89f6-b96ed15c969d" />
+
+
+## Output
+<img width="524" height="330" alt="image" src="https://github.com/user-attachments/assets/7f2cc562-3251-4056-a359-cf24bdcdab14" />
+<img width="1004" height="645" alt="image" src="https://github.com/user-attachments/assets/2cfda599-a7b2-4b73-9f39-cb119f8537e1" />
+Video: https://drive.google.com/file/d/1eUy_5tMlipoLiKiy5p_sQXkHyfzCO8wQ/view?usp=sharing
